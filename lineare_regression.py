@@ -45,7 +45,9 @@ def train_univariate_linear_regression(x: np.ndarray, y: np.ndarray, start_theta
     j = cost_function(linear_hypothesis, x, y)
     cost_history = []
     for i in range(iterations):
-        theta_0, theta_1 = compute_new_theta(x, y, theta_0, theta_1, learning_rate)
         cost_history.append(j(theta_0, theta_1))
+        theta_0, theta_1 = compute_new_theta(x, y, theta_0, theta_1, learning_rate)
+    
+    cost_history.append(j(theta_0, theta_1))
 
     return cost_history, theta_0, theta_1
