@@ -1,0 +1,9 @@
+# intellij
+.idea/
+
+# jupyter shitbook
+.ipynb_checkpoints/
+
+# python byte code
+__pycache__/
+*.pyc
