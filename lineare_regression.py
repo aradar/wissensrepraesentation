@@ -109,7 +109,6 @@ def feature_scaling(x_values: np.ndarray):
     x_scaled = np.copy(x_values)
     x_scaled = x_scaled.transpose()
     for j, feature_vec in enumerate(x_scaled):
-        print(feature_vec.shape)
         mean = np.mean(feature_vec)
         std = np.std(feature_vec)
         x_scaled[j] = np.multiply(np.subtract(feature_vec, mean), 1 / std)
